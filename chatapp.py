@@ -75,6 +75,8 @@ def chatbot_response(text):
 #c=st.container()
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
+    st.title('LiveChat Bot')
+    st.image('logo2.jpg')
 st.sidebar.image('logo.PNG')
 
 def update_first():
