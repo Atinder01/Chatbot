@@ -82,6 +82,6 @@ st.sidebar.image('logo.PNG')
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
-    st.write("Your chat:"+st.session_state.chat)
+    st.write(st.session_state.chat)
 
 st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
