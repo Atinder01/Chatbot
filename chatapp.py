@@ -12,7 +12,7 @@ import numpy as np
 import os
 
 st.title('LiveChat Bot')
-
+st.image('logo2.jpg')
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
