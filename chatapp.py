@@ -73,11 +73,12 @@ def chatbot_response(text):
 #Creating GUI
 
 def header():
-    st.markdown("<h1 style='text-align: center; color: #02BEFE;'>LiveChat Bot</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color: #02BEFE;'>LiveChat Bot</h1>", unsafe_allow_html=True)
     st.image('logo2.jpg')
     
 def footer():    
-    st.markdown("<h4 color: #02BEFE;'>Designed by: Atinderpal Kaur \n [Github Link](https://github.com/Atinder01/Chatbot)</h4>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #02BEFE;'>Designed by: Atinderpal Kaur", unsafe_allow_html=True)
+    st.write("[Github Link](https://github.com/Atinder01/Chatbot)")
     
 def update_first():
     res = chatbot_response(st.session_state.first)
