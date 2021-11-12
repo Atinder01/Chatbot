@@ -77,6 +77,8 @@ def header():
     st.image('logo2.jpg')
     
 def footer():    
+    for _ in range(30):
+             st.write("\n")
     st.markdown("<p style='color: #0068D3;'>Designed by: Atinderpal Kaur", unsafe_allow_html=True)
     st.write("[Github Link](https://github.com/Atinder01/Chatbot)")
     
@@ -91,8 +93,6 @@ if 'chat' not in st.session_state:
     st.session_state.chat = ""
     header()
     st.write("__Your conversation goes here__")
-    for _ in range(30):
-             st.write("\n")
     footer()
   
 st.sidebar.image('logo.PNG')
