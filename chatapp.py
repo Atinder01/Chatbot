@@ -72,19 +72,21 @@ def chatbot_response(text):
 
 #Creating GUI
 
-def header();
+def header():
     st.title('LiveChat Bot')
     st.image('logo2.jpg')
     
-if 'chat' not in st.session_state:
-    st.session_state.chat = ""
-    header()
-
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
     header()
     st.write(st.session_state.chat)
 
-st.sidebar.image('logo.PNG')
-st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
+if 'chat' not in st.session_state:
+    st.session_state.chat = ""
+    header()
+elif 'chat' in st.session_state:
+    st.sidebar.image('logo.PNG')
+    st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
+else:
+    header()
