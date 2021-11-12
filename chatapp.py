@@ -11,13 +11,6 @@ import pickle
 import numpy as np
 import os
 
-[theme]
-primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
-font="sans serif"
-
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
