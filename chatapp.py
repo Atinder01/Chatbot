@@ -71,7 +71,7 @@ def chatbot_response(text):
     return res
 
 #Creating GUI
-st.title('LiveChat Bot')
+st.title('LiveChat Bot'+"![Star]")
 
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
