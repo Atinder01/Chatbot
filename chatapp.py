@@ -71,6 +71,7 @@ def chatbot_response(text):
     return res
 
 #Creating GUI
+st.write('LiveChat Bot')
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
 def update_first():
