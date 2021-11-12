@@ -79,10 +79,11 @@ background-size: cover;
 }
 </style>
 '''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+
 #c=st.container()
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
+    st.markdown(page_bg_img, unsafe_allow_html=True)
     st.title('LiveChat Bot')
     st.image('logo2.jpg')
 st.sidebar.image('logo.PNG')
@@ -90,6 +91,7 @@ st.sidebar.image('logo.PNG')
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
+    st.markdown(page_bg_img, unsafe_allow_html=True)
     st.title('LiveChat Bot')
     st.image('logo2.jpg')
     st.write(st.session_state.chat)
