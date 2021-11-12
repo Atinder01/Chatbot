@@ -3,6 +3,7 @@
 ## Import the necessary packages and load the ‘words.pkl’ and ‘classes.pkl’ pickle files
 import streamlit as st
 import nltk
+nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
