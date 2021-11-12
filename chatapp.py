@@ -73,7 +73,7 @@ def chatbot_response(text):
 #Creating GUI
 page_bg_img = '''
 <style>
-body {
+.stapp {
 background-image: url("https://images.unsplash.com/photo-1547103106-9a0e718bb2d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
 background-size: cover;
 }
