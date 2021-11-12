@@ -11,7 +11,7 @@ import pickle
 import numpy as np
 import os
 
- st.title('LiveChat Bot')
+st.title('LiveChat Bot')
 
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
