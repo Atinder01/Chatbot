@@ -72,14 +72,15 @@ def chatbot_response(text):
 
 #Creating GUI
 st.title('LiveChat Bot')
-st.set_page_config(
+
+if 'chat' not in st.session_state:
+    st.session_state.chat = ""
+    st.set_page_config(
     page_title="Ex-stream-ly Cool App",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-if 'chat' not in st.session_state:
-    st.session_state.chat = ""
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
