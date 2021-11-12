@@ -12,7 +12,7 @@ import numpy as np
 import os
 
 st.title('LiveChat Bot')
-
+placeholder=st.empty()
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
@@ -78,10 +78,10 @@ def chatbot_response(text):
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
    
+st.sidebar.image('logo.PNG')
+st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
+
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
-    st.sidebar.write(st.session_state.chat)
-
-st.sidebar.image('logo.PNG')
-st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
+    placeholder.write(st.session_state.chat)
