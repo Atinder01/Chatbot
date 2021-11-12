@@ -73,7 +73,7 @@ def chatbot_response(text):
 #Creating GUI
 
 def header():
-    st.title('LiveChat Bot')
+    st.markdown("<h1 style='text-align: center; color: blue;'>LiveChat Bot</h1>", unsafe_allow_html=True)
     st.image('logo2.jpg')
     
 def update_first():
