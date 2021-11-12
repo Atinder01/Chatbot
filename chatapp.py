@@ -90,7 +90,7 @@ def update_first():
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
     header()
-    st.write("__Your conversation goes here__)
+    st.write("__Your conversation goes here__")
     for _ in range(30):
              st.write("\n")
     footer()
