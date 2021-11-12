@@ -77,7 +77,7 @@ def header():
     st.image('logo2.jpg')
     
 def footer():    
-    st.markdown("<p style='color: #02BEFE;'>Designed by: Atinderpal Kaur", unsafe_allow_html=True)
+    st.markdown("<p style='color: #0068D3;'>Designed by: Atinderpal Kaur", unsafe_allow_html=True)
     st.write("[Github Link](https://github.com/Atinder01/Chatbot)")
     
 def update_first():
