@@ -71,29 +71,20 @@ def chatbot_response(text):
     return res
 
 #Creating GUI
-page_bg_img = '''
-<style>
-.stapp {
-background-image: url("https://images.unsplash.com/photo-1547103106-9a0e718bb2d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-background-size: cover;
-}
-</style>
-'''
 
-#c=st.container()
-if 'chat' not in st.session_state:
-    st.session_state.chat = ""
-    st.markdown(page_bg_img, unsafe_allow_html=True)
+def header();
     st.title('LiveChat Bot')
     st.image('logo2.jpg')
-st.sidebar.image('logo.PNG')
+    
+if 'chat' not in st.session_state:
+    st.session_state.chat = ""
+    header()
 
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    st.title('LiveChat Bot')
-    st.image('logo2.jpg')
+    header()
     st.write(st.session_state.chat)
 
+st.sidebar.image('logo.PNG')
 st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
