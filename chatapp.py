@@ -11,6 +11,8 @@ import pickle
 import numpy as np
 import os
 
+st.title('LiveChat Bot')
+
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
@@ -71,7 +73,7 @@ def chatbot_response(text):
     return res
 
 #Creating GUI
-st.title('LiveChat Bot')
+
 #c=st.container()
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
