@@ -76,14 +76,14 @@ def chatbot_response(text):
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
     st.title('LiveChat Bot')
-    st.image('logo2.jpeg')
+    st.image('logo2.jpg')
 st.sidebar.image('logo.PNG')
 
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
     st.title('LiveChat Bot')
-    st.image('logo2.jpeg')
+    st.image('logo2.jpg')
     st.write(st.session_state.chat)
 
 st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
