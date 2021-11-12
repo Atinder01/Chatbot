@@ -81,7 +81,8 @@ if 'chat' not in st.session_state:
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
-    st.write(st.session_state.chat)
+    t=st.session_state.chat
+    st.write(t)
 
 st.sidebar.image('logo.PNG')
 st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
