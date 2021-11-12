@@ -76,14 +76,21 @@ def header():
     st.markdown("<h1 style='text-align: center; color: #02BEFE;'>LiveChat Bot</h1>", unsafe_allow_html=True)
     st.image('logo2.jpg')
     
+def footer():    
+    st.markdown("<h4 color: #02BEFE;'>Designed by: Atinderpal Kaur \n [Github Link](https://github.com/Atinder01/Chatbot)</h4>", unsafe_allow_html=True)
+    
 def update_first():
     res = chatbot_response(st.session_state.first)
     st.session_state.chat = st.session_state.chat + os.linesep + "\n__You__: " + st.session_state.first + os.linesep + "\n__Bot__: " + res
+    header()
     st.write(st.session_state.chat)
+    footer()
 
 if 'chat' not in st.session_state:
     st.session_state.chat = ""
+    header()
+    st.write("__Your conversation goes here__")
+    footer()
   
-header()
 st.sidebar.image('logo.PNG')
 st.sidebar.text_input(label='Chat with me', key='first', on_change=update_first)
