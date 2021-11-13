@@ -10,7 +10,7 @@ A chatbot or chatterbot is a software application used to conduct an on-line cha
 **Tools and libraries used:** Keras, Tensorflow,NLTK,Streamlit
 
 **The file structure and the type of files created**
-* **Intents.json** – File containg training dataset.
+* **intents.json** – File containg training dataset.
 * **main.py** – Python file to build model and train chatbot.
 * **words.pkl** – This is a pickle file in which we store the words Python object that contains a list of our vocabulary.
 * **classes.pkl** – The classes pickle file contains the list of categories.
