@@ -26,3 +26,11 @@ A chatbot or chatterbot is a software application used to conduct an on-line cha
 * Predict the response
 * Deploy using streamlit
 
+![flowchart](https://user-images.githubusercontent.com/67895402/141610865-fb25a406-c611-4d7e-b142-364052629ded.png)
+ 
+**Glimpses of webapp**
+
+![image](https://user-images.githubusercontent.com/67895402/141611068-461d2e37-c994-44a0-9e37-5b5204c5a7ff.png)
+![image](https://user-images.githubusercontent.com/67895402/141611082-752a8510-6683-40aa-9e66-e9fb4819c0a6.png)
+
+
